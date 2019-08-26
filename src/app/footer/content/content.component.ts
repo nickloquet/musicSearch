@@ -10,6 +10,7 @@ export class ContentComponent implements OnInit {
   showList = false;
   titleTrack: string = "Madonna";
   toggle = true;
+  criteria;
   songs;
 
     constructor(private service: ItunesService) {}
@@ -18,9 +19,12 @@ export class ContentComponent implements OnInit {
 
     onSearch(){
       this.showList = true;
-      this.titleTrack
-      this.service.search(this.titleTrack).subscribe((res) => {
-        this.songs = res.json().results;
-      });
-    }
+      this.criteria = {
+        titleTrack: this.titleTrack
+      }
+      this.service.search(this.criteria)
+        .subscribe((res) => {
+          this.songs = res.json().results;
+        });
+      }
     }

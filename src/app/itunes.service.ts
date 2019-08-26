@@ -5,6 +5,6 @@ import { Http } from '@angular/http';
 export class ItunesService {
   constructor(private http: Http) { }
   search(criteria) {
-    return this.http.get('https://itunes.apple.com/search?term=${criteria.titleTrack}&limit=${criteria.limit}')
+    return this.http.get('https://itunes.apple.com/search?term=${criteria.titleTrack}')
   }
 }
