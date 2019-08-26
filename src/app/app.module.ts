@@ -7,7 +7,7 @@ import { AppComponent } from './app.component';
 import { HelloComponent } from './hello.component';
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
-import { ContentComponent } from '/footer/content/content.component';
+import { ContentComponent } from './footer/content/content.component';
 import { ItunesService } from './itunes.service';
 
 @NgModule({
