@@ -1,0 +1,5 @@
+<input type="text" [(ngModel)]="titleTrack" name="titleTrack" class"form-control">
+<br>
+<input type="button" value="search" (click)="onSearch()" class="btn btn-primary btn-block">
+
+<table class="table table-striped table-bordered mt-4" [hidden]="!showList">
